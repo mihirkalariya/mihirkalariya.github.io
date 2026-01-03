@@ -444,8 +444,70 @@ img{
     display: flex;
     justify-content: center;
 }
-
+.about__description {
+    /* This makes the left and right edges of the text straight */
+    text-align: justify; 
+    font-size: 1 rem;   
+    line-height: 1.8; 
+}
 /*==================== SKILLS ====================*/
+/* ==================== NEW SKILLS GRID STYLES ==================== */
+/* Paste this at the bottom of styles.css */
+
+/* 1. The Container: Sets up the 2-column grid */
+.skills__container_grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+}
+
+/* 2. The Box (Card): Styles the individual skill boxes */
+.skills__box {
+    background-color: var(--container-color); /* Uses your theme's card color */
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15); /* Adds a subtle shadow */
+    transition: .3s;
+    height: 100%; /* Ensures all boxes in a row are same height */
+}
+
+/* 3. Hover Effect: Makes the box pop up slightly when hovered */
+.skills__box:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    transform: translateY(-5px);
+}
+
+/* 4. The Header inside the box (Icon + Title) */
+.skills__box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.skills__box-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 0; /* Reset default margins */
+}
+
+.skills__icon-large {
+    font-size: 1.8rem;
+    color: var(--first-color);
+    margin-right: 0.75rem;
+}
+
+/* 5. The List of Skills */
+.skills__box-list {
+    display: grid;
+    gap: 0.8rem; /* Space between skill names */
+}
+
+
+
+
+
+
+
 .skills__container{
     row-gap: 0;
 }
